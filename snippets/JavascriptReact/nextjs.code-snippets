@@ -113,5 +113,56 @@
       "}"
     ],
     "description": "Next GetInitialProps"
+  },
+  "Nextjs custom app (_app.js)": {
+    "prefix": "ncapp",
+    "body": [
+      "// import App from 'next/app'",
+      "",
+      "const MyApp = ({ Component, pageProps }) => {",
+      "\treturn <Component {...pageProps} />",
+      "}",
+      "// Only uncomment this method if you have blocking data requirements for",
+      "// every single page in your application. This disables the ability to",
+      "// perform automatic static optimization, causing every page in your app to",
+      "// be server-side rendered.",
+      "",
+      "//MyApp.getInitialProps = async (appContext) => {",
+      "//\t// calls page's `getInitialProps` and fills `appProps.pageProps`",
+      "//\tconst appProps = await App.getInitialProps(appContext);",
+      "//\treturn { ...appProps }",
+      "// }",
+      "",
+      "export default MyApp"
+    ],
+    "description": "Next Custom App (_app.js)"
+  },
+  "Nextjs Custom Document (_document.js)": {
+    "prefix": "ncdocument",
+    "body": [
+      "import Document, { Html, Head, Main, NextScript } from 'next/document'",
+      "",
+      "class MyDocument extends Document {",
+      "\tstatic async getInitialProps(ctx) {",
+      "\t\tconst initialProps = await Document.getInitialProps(ctx)",
+      "\t\treturn { ...initialProps }",
+      "}",
+      "",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<Html>",
+      "\t\t\t\t<Head/>",
+      "\t\t\t\t<body>",
+      "\t\t\t\t\t<Main />",
+      "\t\t\t\t\t<NextScript />",
+      "\t\t\t\t</body>",
+      "\t\t\t</Html>",
+      "\t\t)",
+      "\t}",
+      "}",
+      "",
+      "export default MyDocument;"
+    ],
+    "description": "Next Custom Document (_document.js)"
   }
 }
