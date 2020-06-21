@@ -1,0 +1,32 @@
+{
+  "name": "nextjs-snippets",
+  "displayName": "nextjs-snippets",
+  "description": "snippets for nextjs",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.46.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/JavascriptReact/nextjs.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/JavascriptReact/nextjs.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/TypescriptReact/nextjs.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/TypescriptReact/nextjs.code-snippets"
+      }
+    ]
+  }
+}
