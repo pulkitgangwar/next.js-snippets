@@ -55,5 +55,63 @@
       "}"
     ],
     "description": "Next Normal Function"
+  },
+
+  // nextjs functions
+  "Nextjs getServerSideProps": {
+    "prefix": "ngsspr",
+    "body": [
+      "export const getServerSideProps = async (${1:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${2:data:null}",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetServerSideProps"
+  },
+  "Nextjs getStaticProps": {
+    "prefix": "ngspr",
+    "body": [
+      "export const getStaticProps = async (${1:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${2:data:null}",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetStaticProps"
+  },
+  "Nextjs getStaticPaths": {
+    "prefix": "ngspa",
+    "body": [
+      "export const getStaticPaths = async () => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tpaths:${1:[]},",
+      "\t\tfallback:${2:false}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetStaticPaths"
+  },
+  "Nextjs getInitialProps": {
+    "prefix": "ngipr",
+    "body": [
+      "${1:${TM_FILENAME_BASE}}.getInitialProps = async (${2:ctx}) => {",
+      "",
+      "\treturn {",
+      "\t\t${3:data:null}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetInitialProps"
   }
 }
