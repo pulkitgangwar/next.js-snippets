@@ -11,7 +11,7 @@
       "\t);",
       "}",
       "",
-      "export default ${2:${TM_FILENAME_BASE}}"
+      "export default ${2:${TM_FILENAME_BASE}};"
     ],
     "description": "Next Arrow Function ,Export at the end"
   },
@@ -39,7 +39,7 @@
       "\t);",
       "}",
       "",
-      "export default ${2:${TM_FILENAME_BASE}}"
+      "export default ${2:${TM_FILENAME_BASE}};"
     ],
     "description": "Next Normal Function ,Export at the end"
   },
@@ -133,7 +133,7 @@
       "//\treturn { ...appProps }",
       "// }",
       "",
-      "export default MyApp"
+      "export default MyApp;"
     ],
     "description": "Next Custom App (_app.js)"
   },
@@ -178,5 +178,143 @@
       "}"
     ],
     "description": "Next Api Route"
+  },
+
+  // functions with combinations
+
+  "Nextjs arrow function (export at the end) with getServerSideProps": {
+    "prefix": "nafewserver",
+    "body": [
+      "const ${TM_FILENAME_BASE} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "",
+      "export const getServerSideProps = async (${2:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${3:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "initializing page(arrow function) with getServerSideProps"
+  },
+  "Nextjs normal function(export at the end) with getServerSideProps": {
+    "prefix": "nfewserver",
+    "body": [
+      "function ${TM_FILENAME_BASE}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export async function getServerSideProps(${2:ctx}){",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${3:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "initializing page(normal function) with getServerSideProps"
+  },
+  "Nextjs arrow function with getStaticProps": {
+    "prefix": "nafewstatic",
+    "body": [
+      "const ${TM_FILENAME_BASE} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export const getStaticProps = async (${2:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${3:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "initializing page(arrow function) with getStaticProps"
+  },
+  "Nextjs normal function(export at the end) with getStaticProps": {
+    "prefix": "nfewstatic",
+    "body": [
+      "function ${TM_FILENAME_BASE}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export async function getStaticProps(${2:ctx}){",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${3:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "initializing page(normal function) with getStaticProps"
+  },
+
+  // static generation
+  "Nextjs static generation": {
+    "prefix": "!!static",
+    "body": [
+      "const ${TM_FILENAME_BASE} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export const getStaticPaths = async () => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tpaths:${2:[]},",
+      "\t\tfallback:${3:false}",
+      "\t}",
+      "}",
+      "export const getStaticProps = async (${4:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${5:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ]
   }
 }
