@@ -1,65 +1,303 @@
-# nextjs-snippets README
+# Next.js Snippets
 
-This is the README for your extension "nextjs-snippets". After writing up a brief description, we recommend including the following sections.
+Latest snippets for next.js
 
-## Features
+## Installation
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- install the extension
+- reload vscode
+- snippets will be ready to use
 
-For example if there is an image subfolder under your extension project workspace:
+## Page initialization snippets
 
-\!\[feature X\]\(images/feature-x.png\)
+### `nafe` (nextjs arrow function (export at the end))
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+```javascriptreact
+const FileName = () => {
+    return (
+        <div>
+            ${1:Enter}
+        </div>
+    );
+}
 
-## Requirements
+export default FileName;
+```
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+### `naf` (nextjs arrow function)
 
-## Extension Settings
+```javascriptreact
+export default () => {
+    return (
+        <div>
+            ${1:Enter}
+        </div>
+    );
+}
+```
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+### `nafe` (nextjs normal function (export at the end))
 
-For example:
+```javascriptreact
+function FileName() {
+    return (
+        <div>
+            ${1:Enter}
+        </div>
+    );
+}
 
-This extension contributes the following settings:
+export default FileName;
+```
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+### `nf` (nextjs normal function )
 
-## Known Issues
+```javascriptreact
+export default function ()  {
+    return (
+        <div>
+            ${1:Enter}
+        </div>
+    );
+}
+```
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## Nextjs snippets
 
-## Release Notes
+### `ngsspr` (nextjs getServerSideProps)
 
-Users appreciate release notes as you update your extension.
+```javascriptreact
+ export const getServerSideProps = async (ctx) => {
 
-### 1.0.0
+    return {
+        props:{
+            data:null
+        }
+    }
+}
+```
 
-Initial release of ...
+### `ngspr` (nextjs getStaticProps)
 
-### 1.0.1
+```javascriptreact
+ export const getStaticProps = async (ctx) => {
 
-Fixed issue #.
+    return {
+        props:{
+            data:null
+        }
+    }
+}
+```
 
-### 1.1.0
+### `ngspa` (nextjs getStaticPaths)
 
-Added features X, Y, and Z.
+```javascriptreact
+export const getStaticPaths = async () => {
 
------------------------------------------------------------------------------------------------------------
+    return {
+        paths:[],
+        fallback:false
+    }
+}
+```
 
-## Working with Markdown
+### `ngipr` (nextjs getInitialProps)
 
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+```javascriptreact
+FileName.getInitialProps = async (ctx) => {
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+    return {
+        ${3:data:null}
+    }
+}
+```
 
-### For more information
+## Nextjs Custom app and document (\_app.js,\_document.js)
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+### `ncapp` (nextjs custom app)
 
-**Enjoy!**
+```javascriptreact
+// import App from 'next/app'
+
+const MyApp = ({ Component pageProps }) => {
+    return <Component {...pageProps} />
+}
+// Only uncomment this method if you have blocking data requirements for
+// every single page in your application. This disables the ability to
+// perform automatic static optimization causing every page in your app to
+// be server-side rendered.
+
+//MyApp.getInitialProps = async (appContext) => {
+// calls page's `getInitialProps` and fills `appProps.pageProps`
+// const appProps = await App.getInitialProps(appContext);
+// return { ...appProps }
+// }
+
+export default MyApp;
+```
+
+### `ncdocument` (nextjs custom document)
+
+```javascriptreact
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+
+class MyDocument extends Document {
+    static async getInitialProps(ctx) {
+        const initialProps = await Document.getInitialProps(ctx)
+        return { ...initialProps }
+    }
+
+    render() {
+        return (
+            <Html>
+                <Head/>
+                <body>
+                    <Main />
+                    <NextScript />
+                </body>
+            </Html>
+        )
+    }
+}
+
+export default MyDocument;
+```
+
+## Nextjs api routes
+
+### `napi` (nextjs api route)
+
+```javascritreact
+export default (req,res) => {
+
+
+}
+```
+
+## Nextjs page initialization function with Nextjs functions
+
+### `nafewserver` (nextjs arrow function (export at the end) with getServerSideProps)
+
+```javascriptreact
+const FileName = () => {
+    return (
+        <div>
+            ${1:Enter}
+        </div>
+    );
+}
+
+export const getServerSideProps = async (ctx) => {
+
+    return {
+        props:{
+            data:null
+        }
+    }
+}
+
+export default FileName;
+```
+
+### `nfewserver` (nextjs normal function (export at the end) with getServerSideProps)
+
+```javascriptreact
+function FileName() {
+    return (
+        <div>
+            ${1:Enter}
+        </div>
+    );
+}
+
+export async function getServerSideProps(ctx){
+
+    return {
+        props:{
+            data:null
+        }
+    }
+}
+
+export default FileName;
+```
+
+### `nafewstatic` (nextjs arrow function (export at the end) with getStaticProps)
+
+```javascriptreact
+const FileName = () => {
+    return (
+        <div>
+            ${1:Enter}
+        </div>
+    );
+}
+
+export const getStaticProps = async (ctx) => {
+
+    return {
+        props:{
+            data:null
+        }
+    }
+}
+
+export default FileName;
+```
+
+### `nfewstatic` (nextjs normal function (export at the end) with getStaticProps)
+
+```javascriptreact
+function FileName() {
+    return (
+        <div>
+            ${1:Enter}
+        </div>
+    );
+}
+
+export async function getStaticProps(ctx){
+
+    return {
+        props:{
+            data:null
+        }
+    }
+}
+
+export default FileName;
+```
+
+## Static generation snippet
+
+### `!!static` (initializing function with getStaticPaths and getStaticProps)
+
+```javascriptreact
+const FileName = () => {
+    return (
+        <div>
+            ${1:Enter}
+        </div>
+    );
+}
+
+export const getStaticPaths = async () => {
+
+    return {
+        paths:[],
+        fallback:false
+    }
+}
+
+export const getStaticProps = async (ctx) => {
+
+    return {
+        props:{
+            data:null
+        }
+    }
+}
+
+export default FileName;
+```
