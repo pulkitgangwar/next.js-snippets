@@ -164,5 +164,19 @@
       "export default MyDocument;"
     ],
     "description": "Next Custom Document (_document.js)"
+  },
+
+  // api routes
+  "Nextjs Api route": {
+    "prefix": "napi",
+    "body": [
+      "export default (${1:req}, ${2:res}) => {",
+      "",
+      "\t${3:req.statusCode = 200}",
+      "",
+      "",
+      "}"
+    ],
+    "description": "Next Api Route"
   }
 }
