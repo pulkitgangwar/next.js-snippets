@@ -34,5 +34,6 @@
         "path": "./snippets/TypescriptReact/nextjs.code-snippets"
       }
     ]
-  }
+  },
+  "license": "MIT"
 }
