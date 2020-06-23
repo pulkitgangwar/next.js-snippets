@@ -301,3 +301,55 @@ export const getStaticProps = async (ctx) => {
 
 export default FileName;
 ```
+
+## Importing Components
+
+### `nil` (nextjs import link)
+
+```javascriptreact
+import Link from 'next/link';
+```
+
+### `nir` (nextjs import router(default))
+
+```javascriptreact
+import Router from 'next/router';
+```
+
+### `niur` (nextjs import useRouter)
+
+```javascriptreact
+import {useRouter} from 'next/router';
+```
+
+### `nih` (nextjs import Head)
+
+```javascriptreact
+import Head from 'next/head';
+```
+
+## Imported Components Usage
+
+### `nulwhref` (nextjs use link with href)
+
+```javascriptreact
+<Link href="path"><a>Value</a></Link>
+```
+
+### `nulwas` (nextjs use link with as)
+
+```javascriptreact
+<Link href="routepattern" as="path"><a>Value</a></Link>
+```
+
+### `nuur` (nextjs use useRouter)
+
+```javascriptreact
+const router = useRouter();
+```
+
+### `nuh` (nextjs use Head )
+
+```javascriptreact
+<Head><title>Title</title></Head>
+```
