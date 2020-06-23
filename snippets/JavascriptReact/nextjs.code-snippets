@@ -316,5 +316,27 @@
       "",
       "export default ${TM_FILENAME_BASE};"
     ]
+  },
+
+  // import next components
+  "Nextjs import for link component": {
+    "prefix": "nil",
+    "body": ["import ${1:Link} from 'next/link';"],
+    "description": "next import link"
+  },
+  "Nextjs import for Router(default) component": {
+    "prefix": "nir",
+    "body": ["import ${1:Router} from 'next/router';"],
+    "description": "next import Router(default)"
+  },
+  "Nextjs import for useRouter component": {
+    "prefix": "niur",
+    "body": ["import {useRouter} from 'next/router';"],
+    "description": "next import useRouter"
+  },
+  "Nextjs import for head component": {
+    "prefix": "nih",
+    "body": ["import ${1:Head} from 'next/head';"],
+    "description": "next import Head"
   }
 }
