@@ -2,6 +2,9 @@
 
 Latest snippets for next.js
 
+![next js-snippets-gif](https://user-images.githubusercontent.com/50038851/85401251-59c46400-b577-11ea-9eb3-a8ed916c711e.gif)
+
+
 ## Installation
 
 - install the extension
