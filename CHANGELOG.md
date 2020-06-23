@@ -2,7 +2,12 @@
 
 All notable changes to the "nextjs-snippets" extension will be documented in this file.
 
-## [Unreleased]
+## 0.0.2 - 2020/06/23
+
+### Added
+
+- Added snippets for importing nextjs components
+- Added snippets for using nextjs components
 
 ## 0.0.1 - 2020/06/21
 
