@@ -338,5 +338,30 @@
     "prefix": "nih",
     "body": ["import ${1:Head} from 'next/head';"],
     "description": "next import Head"
+  },
+
+  // nextjs imported components usage
+
+  "Nextjs link component defination with href": {
+    "prefix": "nulwhref",
+    "body": ["<Link href='${1:path}'><a>${2:value}</a></Link>"],
+    "description": "nextjs usage of link component with href"
+  },
+  "Nextjs link component defination with href and as": {
+    "prefix": "nulwas",
+    "body": [
+      "<Link href='${1:routepattern}' as='${2:path}'><a>${3:value}</a></Link>"
+    ],
+    "description": "nextjs usage of link component with href and as"
+  },
+  "Nextjs useRouter component defination": {
+    "prefix": "nuur",
+    "body": ["const ${1:router} = useRouter();"],
+    "description": "nextjs usage of useRouter component"
+  },
+  "Nextjs Head component defination": {
+    "prefix": "nuh",
+    "body": ["<Head>", "\t<title>${1:Title}</title>", "</Head>"],
+    "description": "nextjs usage of Head Component"
   }
 }
