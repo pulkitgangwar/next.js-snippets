@@ -55,5 +55,134 @@
       "}"
     ],
     "description": "Next Normal Function"
+  },
+  // functions with combinations
+
+  "Nextjs typescript arrow function  with getServerSideProps": {
+    "prefix": "ntsfwserver",
+    "body": [
+      "import { GetServerSideProps } from 'next';",
+      "",
+      "const ${TM_FILENAME_BASE} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "",
+      "export const getServerSideProps:GetServerSideProps = async (${2:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${3:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "initializing page(arrow function) with getServerSideProps"
+  },
+  "Nextjs typescript arrow function with getStaticProps": {
+    "prefix": "ntsfwstatic",
+    "body": [
+      "import {GetStaticProps} from 'next';",
+      "",
+      "const ${TM_FILENAME_BASE} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export const getStaticProps:GetStaticProps = async (${2:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${3:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ],
+    "description": "initializing page(arrow function) with getStaticProps"
+  },
+  // static generation
+  "Nextjs static generation": {
+    "prefix": "!!tsstatic",
+    "body": [
+      "import {GetStaticPaths,GetStaticProps} from 'next';",
+      "",
+      "const ${TM_FILENAME_BASE} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export const getStaticPaths:GetStaticPaths = async () => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tpaths:${2:[]},",
+      "\t\tfallback:${3:false}",
+      "\t}",
+      "}",
+      "export const getStaticProps:GetStaticProps = async (${4:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${5:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE};"
+    ]
+  },
+  // import next components
+  "Nextjs import for link component": {
+    "prefix": "nil",
+    "body": ["import ${1:Link} from 'next/link';"],
+    "description": "next import link"
+  },
+  "Nextjs import for Router(default) component": {
+    "prefix": "nir",
+    "body": ["import ${1:Router} from 'next/router';"],
+    "description": "next import Router(default)"
+  },
+  "Nextjs import for useRouter component": {
+    "prefix": "niur",
+    "body": ["import {useRouter} from 'next/router';"],
+    "description": "next import useRouter"
+  },
+  "Nextjs import for head component": {
+    "prefix": "nih",
+    "body": ["import ${1:Head} from 'next/head';"],
+    "description": "next import Head"
+  },
+
+  // api routes
+  "Nextjs Api route": {
+    "prefix": "ntsapi",
+    "body": [
+      "import { NextApiRequest, NextApiResponse } from 'next';",
+      "",
+      "export default (${1:req}:NextApiRequest, ${2:res}:NextApiResponse) => {",
+      "",
+      "\t${3:req.statusCode = 200}",
+      "",
+      "",
+      "}"
+    ],
+    "description": "Next Api Route"
   }
 }
