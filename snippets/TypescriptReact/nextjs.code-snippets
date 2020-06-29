@@ -1,6 +1,59 @@
 {
-  "Basic Ts": {
-    "prefix": "typescript",
-    "body": ["This is from typescript folder"]
+  // function snippets for pages
+  "Nextjs arrow function export at the end": {
+    "prefix": "nafe",
+    "body": [
+      "const ${2:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export default ${2:${TM_FILENAME_BASE}};"
+    ],
+    "description": "Next Arrow Function ,Export at the end"
+  },
+  "Nextjs arrow function": {
+    "prefix": "naf",
+    "body": [
+      "export default () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}"
+    ],
+    "description": "Next Arrow Function"
+  },
+  "Nextjs normal function with export at the end": {
+    "prefix": "nfe",
+    "body": [
+      "function ${2:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export default ${2:${TM_FILENAME_BASE}};"
+    ],
+    "description": "Next Normal Function ,Export at the end"
+  },
+  "Nextjs normal function": {
+    "prefix": "nf",
+    "body": [
+      "export default function() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${1:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}"
+    ],
+    "description": "Next Normal Function"
   }
 }
