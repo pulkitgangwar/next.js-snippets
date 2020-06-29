@@ -184,5 +184,48 @@
       "}"
     ],
     "description": "Next Api Route"
+  },
+
+  // custom app
+  "Nextjs typescript custom app (_app.js)": {
+    "prefix": "ntscapp",
+    "body": [
+      "import {AppProps} from 'next/app'",
+      "",
+      "const MyApp = ({ Component, pageProps }:AppProps) => {",
+      "\treturn <Component {...pageProps} />",
+      "}",
+      "",
+      "export default MyApp;"
+    ],
+    "description": "Next Custom App (_app.js)"
+  },
+  "Nextjs typescript Custom Document (_document.js)": {
+    "prefix": "ntscdocument",
+    "body": [
+      "import Document, { Html, Head, Main, NextScript } from 'next/document'",
+      "",
+      "class MyDocument extends Document {",
+      "\tstatic async getInitialProps(ctx) {",
+      "\t\tconst initialProps = await Document.getInitialProps(ctx)",
+      "\t\treturn { ...initialProps }",
+      "}",
+      "",
+      "\trender() {",
+      "\t\treturn (",
+      "\t\t\t<Html>",
+      "\t\t\t\t<Head/>",
+      "\t\t\t\t<body>",
+      "\t\t\t\t\t<Main />",
+      "\t\t\t\t\t<NextScript />",
+      "\t\t\t\t</body>",
+      "\t\t\t</Html>",
+      "\t\t)",
+      "\t}",
+      "}",
+      "",
+      "export default MyDocument;"
+    ],
+    "description": "Next Typescript Custom Document (_document.js)"
   }
 }
