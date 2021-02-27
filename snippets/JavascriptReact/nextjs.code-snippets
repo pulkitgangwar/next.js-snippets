@@ -377,5 +377,10 @@
     "prefix": "nui",
     "body": ["<Image src='${1:path}' width='' height='' alt='' />"],
     "description": "nextjs usage of Image Component"
+  },
+  "Nextjs Dynamic Import defination": {
+    "prefix": "nud",
+    "body": ["const ${1:DynamicComponent} = dynamic(() => import('${2:./path}'))"],
+    "description": "nextjs usage of Dynamic Import"
   }
 }
