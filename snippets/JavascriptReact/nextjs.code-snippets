@@ -372,5 +372,10 @@
     "prefix": "nuh",
     "body": ["<Head>", "\t<title>${1:Title}</title>", "</Head>"],
     "description": "nextjs usage of Head Component"
+  },
+  "Nextjs Image component defination": {
+    "prefix": "nui",
+    "body": ["<Image src='${1:path}' width='' height='' alt='' />"],
+    "description": "nextjs usage of Image Component"
   }
 }
