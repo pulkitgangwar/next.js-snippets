@@ -382,5 +382,10 @@
     "prefix": "nud",
     "body": ["const ${1:DynamicComponent} = dynamic(() => import('${2:./path}'))"],
     "description": "nextjs usage of Dynamic Import"
-  }
+  },
+  "Nextjs Dynamic Import defination with named exports": {
+    "prefix": "nudwne",
+    "body": ["const ${1:DynamicComponent} = dynamic(() =>", "\timport('${2:./path}').then((mod) => mod.${1:DynamicComponent})", ")"],
+    "description": "nextjs usage of Dynamic Import with named exports"
+  },
 }
