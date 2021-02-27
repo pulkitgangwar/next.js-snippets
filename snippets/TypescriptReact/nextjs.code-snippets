@@ -148,11 +148,12 @@
       "export default ${TM_FILENAME_BASE};"
     ]
   },
+  
   // import next components
-  "Nextjs import for link component": {
+  "Nextjs import for Link component": {
     "prefix": "nil",
     "body": ["import ${1:Link} from 'next/link';"],
-    "description": "next import link"
+    "description": "next import Link"
   },
   "Nextjs import for Router(default) component": {
     "prefix": "nir",
@@ -164,10 +165,20 @@
     "body": ["import {useRouter} from 'next/router';"],
     "description": "next import useRouter"
   },
-  "Nextjs import for head component": {
+  "Nextjs import for Head component": {
     "prefix": "nih",
     "body": ["import ${1:Head} from 'next/head';"],
     "description": "next import Head"
+  },
+  "Nextjs import for Image component": {
+    "prefix": "nii",
+    "body": ["import ${1:Image} from 'next/image';"],
+    "description": "next import Image"
+  },
+  "Nextjs import for Dynamic": {
+    "prefix": "nid",
+    "body": ["import ${1:dynamic} from 'next/dynamic';"],
+    "description": "next import dynamic"
   },
 
   // api routes
