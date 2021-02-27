@@ -559,7 +559,6 @@ export const getStaticProps:GetStaticProps = async (ctx) => {
 export default FileName;
 ```
 
-
 ## Importing Components
 
 ### `nil` (nextjs import link)
@@ -584,4 +583,10 @@ import {useRouter} from 'next/router';
 
 ```javascriptreact
 import Head from 'next/head';
+```
+
+### `nii` (nextjs import Image)
+
+```javascriptreact
+import Image from 'next/image';
 ```

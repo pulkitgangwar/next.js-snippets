@@ -319,10 +319,10 @@
   },
 
   // import next components
-  "Nextjs import for link component": {
+  "Nextjs import for Link component": {
     "prefix": "nil",
     "body": ["import ${1:Link} from 'next/link';"],
-    "description": "next import link"
+    "description": "next import Link"
   },
   "Nextjs import for Router(default) component": {
     "prefix": "nir",
@@ -334,14 +334,18 @@
     "body": ["import {useRouter} from 'next/router';"],
     "description": "next import useRouter"
   },
-  "Nextjs import for head component": {
+  "Nextjs import for Head component": {
     "prefix": "nih",
     "body": ["import ${1:Head} from 'next/head';"],
     "description": "next import Head"
   },
+  "Nextjs import for Image component": {
+    "prefix": "nii",
+    "body": ["import ${1:Image} from 'next/image';"],
+    "description": "next import Image"
+  },
 
   // nextjs imported components usage
-
   "Nextjs link component defination with href": {
     "prefix": "nulwhref",
     "body": ["<Link href='${1:path}'><a>${2:value}</a></Link>"],
