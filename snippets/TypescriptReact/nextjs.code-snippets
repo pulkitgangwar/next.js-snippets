@@ -175,6 +175,11 @@
     "body": ["import ${1:Image} from 'next/image';"],
     "description": "next import Image"
   },
+  "Nextjs import for Dynamic": {
+    "prefix": "nid",
+    "body": ["import ${1:dynamic} from 'next/dynamic';"],
+    "description": "next import dynamic"
+  },
 
   // api routes
   "Nextjs Api route": {

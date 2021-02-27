@@ -590,3 +590,9 @@ import Head from 'next/head';
 ```javascriptreact
 import Image from 'next/image';
 ```
+
+### `nid` (nextjs import dynamic)
+
+```javascriptreact
+import dynamic from 'next/dynamic';
+```

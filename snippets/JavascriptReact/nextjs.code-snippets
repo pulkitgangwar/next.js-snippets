@@ -344,6 +344,11 @@
     "body": ["import ${1:Image} from 'next/image';"],
     "description": "next import Image"
   },
+  "Nextjs import for Dynamic": {
+    "prefix": "nid",
+    "body": ["import ${1:dynamic} from 'next/dynamic';"],
+    "description": "next import dynamic"
+  },
 
   // nextjs imported components usage
   "Nextjs link component defination with href": {
