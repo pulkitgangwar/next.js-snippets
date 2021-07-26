@@ -25,7 +25,7 @@ Latest snippets for next.js
 const FileName = () => {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -39,7 +39,7 @@ export default FileName;
 export default () => {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -51,7 +51,7 @@ export default () => {
 function FileName() {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -65,7 +65,7 @@ export default FileName;
 export default function ()  {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -132,10 +132,6 @@ FileName.getInitialProps = async (ctx) => {
 const MyApp = ({ Component pageProps }) => {
     return <Component {...pageProps} />
 }
-// Only uncomment this method if you have blocking data requirements for
-// every single page in your application. This disables the ability to
-// perform automatic static optimization causing every page in your app to
-// be server-side rendered.
 
 //MyApp.getInitialProps = async (appContext) => {
 // calls page's `getInitialProps` and fills `appProps.pageProps`
@@ -192,7 +188,7 @@ export default (req,res) => {
 const FileName = () => {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -215,7 +211,7 @@ export default FileName;
 function FileName() {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -238,7 +234,7 @@ export default FileName;
 const FileName = () => {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -261,7 +257,7 @@ export default FileName;
 function FileName() {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -286,7 +282,7 @@ export default FileName;
 const FileName = () => {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -373,7 +369,7 @@ const router = useRouter();
 const FileName = () => {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -387,7 +383,7 @@ export default FileName;
 export default () => {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -399,7 +395,7 @@ export default () => {
 function FileName() {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -413,7 +409,7 @@ export default FileName;
 export default function ()  {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -429,7 +425,7 @@ import {GetServerSideProps} from 'next';
 const FileName = () => {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -454,7 +450,7 @@ import {GetStaticProps} from 'next';
 const FileName = () => {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
@@ -534,7 +530,7 @@ import {GetStaticPaths,GetStaticProps} from 'next';
 const FileName = () => {
     return (
         <div>
-            ${1:Enter}
+            CONTENT
         </div>
     );
 }
