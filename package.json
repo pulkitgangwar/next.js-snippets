@@ -15,17 +15,23 @@
   "categories": [
     "Snippets"
   ],
+  "bugs": {
+    "url": "https://github.com/pulkitgangwar/next.js-snippets/issues"
+  },
   "keywords": [
     "nextjs",
     "next.js",
     "next-js",
+    "snippets",
     "nextjs snippets",
     "next.js snippets",
     "next-js snippets",
     "snippets for nextjs",
     "snippets for next.js",
     "snippets for next-js",
-    "react"
+    "react",
+    "javascript",
+    "typescript"
   ],
   "contributes": {
     "snippets": [
