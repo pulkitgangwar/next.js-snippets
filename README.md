@@ -1,3 +1,7 @@
+[![Install](https://vsmarketplacebadge.apphb.com/installs-short/pulkitgangwar.nextjs-snippets.svg)](https://vsmarketplacebadge.apphb.com/installs-short/pulkitgangwar.nextjs-snippets.svg)
+[![Downloads](https://vsmarketplacebadge.apphb.com/downloads-short/pulkitgangwar.nextjs-snippets.svg)](https://vsmarketplacebadge.apphb.com/downloads-short/pulkitgangwar.nextjs-snippets.svg)
+[![Ratings](https://vsmarketplacebadge.apphb.com/rating-star/pulkitgangwar.nextjs-snippets.svg)](https://vsmarketplacebadge.apphb.com/rating-star/pulkitgangwar.nextjs-snippets.svg)
+
 # Next.js Snippets
 
 Latest snippets for next.js
