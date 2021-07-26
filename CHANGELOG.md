@@ -2,6 +2,12 @@
 
 All notable changes to the "nextjs-snippets" extension will be documented in this file.
 
+## 0.0.5 - 2021/07/26
+
+### Added
+
+- changed snippets editing style, now when a snippet is created filename is edited first
+
 ## 0.0.4 - 2021/02/27
 
 ### Added
