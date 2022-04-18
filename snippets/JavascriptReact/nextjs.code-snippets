@@ -3,7 +3,7 @@
   "Nextjs arrow function export at the end": {
     "prefix": "nafe",
     "body": [
-      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "export const ${1:${TM_FILENAME_BASE}} = () => {",
       "\treturn (",
       "\t\t<div>",
       "\t\t\t${2:Enter}",
@@ -11,7 +11,6 @@
       "\t);",
       "}",
       "",
-      "export default ${1:${TM_FILENAME_BASE}};"
     ],
     "description": "Next Arrow Function ,Export at the end"
   },
