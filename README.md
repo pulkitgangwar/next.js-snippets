@@ -49,7 +49,7 @@ export default () => {
 }
 ```
 
-### `nafe` (nextjs normal function (export at the end))
+### `nfe` (nextjs normal function (export at the end))
 
 ```javascriptreact
 function FileName() {
