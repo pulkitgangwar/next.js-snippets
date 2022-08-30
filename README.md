@@ -25,7 +25,7 @@ Latest snippets for next.js
 
 ### `nafe` (nextjs arrow function (export at the end))
 
-```javascriptreact
+```js
 const FileName = () => {
     return (
         <div>
@@ -39,7 +39,7 @@ export default FileName;
 
 ### `naf` (nextjs arrow function)
 
-```javascriptreact
+```js
 export default () => {
     return (
         <div>
@@ -51,7 +51,7 @@ export default () => {
 
 ### `nfe` (nextjs normal function (export at the end))
 
-```javascriptreact
+```js
 function FileName() {
     return (
         <div>
@@ -65,7 +65,7 @@ export default FileName;
 
 ### `nf` (nextjs normal function )
 
-```javascriptreact
+```js
 export default function ()  {
     return (
         <div>
@@ -79,7 +79,7 @@ export default function ()  {
 
 ### `ngsspr` (nextjs getServerSideProps)
 
-```javascriptreact
+```js
  export const getServerSideProps = async (ctx) => {
 
     return {
@@ -92,7 +92,7 @@ export default function ()  {
 
 ### `ngspr` (nextjs getStaticProps)
 
-```javascriptreact
+```js
  export const getStaticProps = async (ctx) => {
 
     return {
@@ -105,7 +105,7 @@ export default function ()  {
 
 ### `ngspa` (nextjs getStaticPaths)
 
-```javascriptreact
+```js
 export const getStaticPaths = async () => {
 
     return {
@@ -117,7 +117,7 @@ export const getStaticPaths = async () => {
 
 ### `ngipr` (nextjs getInitialProps)
 
-```javascriptreact
+```js
 FileName.getInitialProps = async (ctx) => {
 
     return {
@@ -130,7 +130,7 @@ FileName.getInitialProps = async (ctx) => {
 
 ### `ncapp` (nextjs custom app)
 
-```javascriptreact
+```js
 // import App from 'next/app'
 
 const MyApp = ({ Component pageProps }) => {
@@ -148,7 +148,7 @@ export default MyApp;
 
 ### `ncdocument` (nextjs custom document)
 
-```javascriptreact
+```js
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
@@ -188,7 +188,7 @@ export default (req,res) => {
 
 ### `nafewserver` (nextjs arrow function (export at the end) with getServerSideProps)
 
-```javascriptreact
+```js
 const FileName = () => {
     return (
         <div>
@@ -211,7 +211,7 @@ export default FileName;
 
 ### `nfewserver` (nextjs normal function (export at the end) with getServerSideProps)
 
-```javascriptreact
+```js
 function FileName() {
     return (
         <div>
@@ -234,7 +234,7 @@ export default FileName;
 
 ### `nafewstatic` (nextjs arrow function (export at the end) with getStaticProps)
 
-```javascriptreact
+```js
 const FileName = () => {
     return (
         <div>
@@ -257,7 +257,7 @@ export default FileName;
 
 ### `nfewstatic` (nextjs normal function (export at the end) with getStaticProps)
 
-```javascriptreact
+```js
 function FileName() {
     return (
         <div>
@@ -282,7 +282,7 @@ export default FileName;
 
 ### `!!static` (initializing function with getStaticPaths and getStaticProps)
 
-```javascriptreact
+```js
 const FileName = () => {
     return (
         <div>
@@ -315,25 +315,25 @@ export default FileName;
 
 ### `nil` (nextjs import link)
 
-```javascriptreact
+```js
 import Link from 'next/link';
 ```
 
 ### `nir` (nextjs import router(default))
 
-```javascriptreact
+```js
 import Router from 'next/router';
 ```
 
 ### `niur` (nextjs import useRouter)
 
-```javascriptreact
+```js
 import {useRouter} from 'next/router';
 ```
 
 ### `nih` (nextjs import Head)
 
-```javascriptreact
+```js
 import Head from 'next/head';
 ```
 
@@ -341,25 +341,25 @@ import Head from 'next/head';
 
 ### `nulwhref` (nextjs use link with href)
 
-```javascriptreact
+```js
 <Link href="path"><a>Value</a></Link>
 ```
 
 ### `nulwas` (nextjs use link with as)
 
-```javascriptreact
+```js
 <Link href="routepattern" as="path"><a>Value</a></Link>
 ```
 
 ### `nuur` (nextjs use useRouter)
 
-```javascriptreact
+```js
 const router = useRouter();
 ```
 
 ### `nuh` (nextjs use Head )
 
-```javascriptreact
+```js
 <Head><title>Title</title></Head>
 ```
 
@@ -369,7 +369,7 @@ const router = useRouter();
 
 ### `nafe` (nextjs arrow function (export at the end))
 
-```javascriptreact
+```js
 const FileName = () => {
     return (
         <div>
@@ -383,7 +383,7 @@ export default FileName;
 
 ### `naf` (nextjs arrow function)
 
-```javascriptreact
+```js
 export default () => {
     return (
         <div>
@@ -395,7 +395,7 @@ export default () => {
 
 ### `nafe` (nextjs normal function (export at the end))
 
-```javascriptreact
+```js
 function FileName() {
     return (
         <div>
@@ -409,7 +409,7 @@ export default FileName;
 
 ### `nf` (nextjs normal function )
 
-```javascriptreact
+```js
 export default function ()  {
     return (
         <div>
@@ -423,7 +423,7 @@ export default function ()  {
 
 ### `ntsfwserver` (nextjs typescript function with getServerSideProps)
 
-```typescriptreact
+```ts
 import {GetServerSideProps} from 'next';
 
 const FileName = () => {
@@ -448,7 +448,7 @@ export default FileName;
 
 ### `ntsfwstatic` (nextjs typescript function with getStaticProps)
 
-```typescriptreact
+```ts
 import {GetStaticProps} from 'next';
 
 const FileName = () => {
@@ -475,7 +475,7 @@ export default FileName;
 
 ### `ntsapi` (nextjs typescript api route)
 
-```typescriptreact
+```ts
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
@@ -488,7 +488,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
 
 ### `ntscapp` (nextjs typescript custom app)
 
-```typescriptreact
+```ts
 import { AppProps } from 'next/app';
 
 const MyApp = ({ Component pageProps }:AppProps) => {
@@ -500,7 +500,7 @@ export default MyApp;
 
 ### `ntscdocument` (nextjs typescript custom document)
 
-```javascriptreact
+```js
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
@@ -529,7 +529,7 @@ export default MyDocument;
 
 ### `!!tsstatic` (initializing function with getStaticPaths and getStaticProps(typescript))
 
-```typescriptreact
+```ts
 import {GetStaticPaths,GetStaticProps} from 'next';
 const FileName = () => {
     return (
@@ -563,36 +563,36 @@ export default FileName;
 
 ### `nil` (nextjs import link)
 
-```javascriptreact
+```js
 import Link from 'next/link';
 ```
 
 ### `nir` (nextjs import router(default))
 
-```javascriptreact
+```js
 import Router from 'next/router';
 ```
 
 ### `niur` (nextjs import useRouter)
 
-```javascriptreact
+```js
 import {useRouter} from 'next/router';
 ```
 
 ### `nih` (nextjs import Head)
 
-```javascriptreact
+```js
 import Head from 'next/head';
 ```
 
 ### `nii` (nextjs import Image)
 
-```javascriptreact
+```js
 import Image from 'next/image';
 ```
 
 ### `nid` (nextjs import dynamic)
 
-```javascriptreact
+```js
 import dynamic from 'next/dynamic';
 ```
