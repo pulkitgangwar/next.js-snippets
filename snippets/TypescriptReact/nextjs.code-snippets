@@ -1,4 +1,149 @@
 {
+  // new easy to use extensions
+  "Nextjs page with server side props": {
+    "prefix": "nspage",
+    "body": [
+      "import { GetServerSideProps } from 'next';",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${2:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export const getServerSideProps: GetServerSideProps = async (${3:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Nextjs page with server side props"
+  },
+  "Nextjs page with static side props and static side paths": {
+    "prefix": "nstaticpage",
+    "body": [
+      "import { GetStaticPaths,GetStaticProps } from 'next';",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${2:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export const getStaticPaths: GetStaticPaths = () => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tpaths:${3:[]},",
+      "\t\tfallback:${4:false}",
+      "\t}",
+      "}",
+      "export const getStaticProps: GetStaticProps = async (${5:ctx}) =>{",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": ""
+  },
+  "Nextjs Custom 404 page": {
+    "prefix": "nnotfound",
+    "body": [
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h1>",
+      "\t\t\t\t${2:Page Not Found}",
+      "\t\t\t</h1>",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      ""
+    ],
+    "description": "Nextjs not found page"
+  },
+  "Nextjs Custom 500 page": {
+    "prefix": "nservererror",
+    "body": [
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h1>",
+      "\t\t\t\t${2:Server Error}",
+      "\t\t\t</h1>",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      ""
+    ],
+    "description": "Nextjs server error page"
+  },
+  "Nextjs getServerSideProps()": {
+    "prefix": "ngetServerSideProps",
+    "body": [
+      "export const getServerSideProps: GetServerSideProps = async (${1:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Nextjs getServerSideProps function"
+  },
+  "Nextjs getStaticProps()": {
+    "prefix": "ngetStaticProps",
+    "body": [
+      "export const getStaticProps: GetStaticProps = (${1:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Nextjs getStaticProps function"
+  },
+  "Nextjs getStaticPaths()": {
+    "prefix": "ngetStaticPaths",
+    "body": [
+      "export const getStaticPaths: GetStaticPaths = () => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tpaths:${1:[]},",
+      "\t\tfallback:${2:false}",
+      "\t}",
+      "}"
+    ],
+    "description": "Nextjs getStaticPaths function"
+  },
+  "Nextjs use link": {
+    "prefix": "nul",
+    "body": ["<Link href='${1:path}'>${2:link}</Link>"],
+    "description": "Nextjs use link element"
+  },
+
   // function snippets for pages
   "Nextjs arrow function export at the end": {
     "prefix": "nafe",
@@ -56,9 +201,68 @@
     ],
     "description": "Next Normal Function"
   },
+  // nextjs functions
+  "Nextjs getServerSideProps": {
+    "prefix": "ngsspr",
+    "body": [
+      "export const getServerSideProps: GetServerSideProps = async (${1:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${2:data:null}",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetServerSideProps"
+  },
+  "Nextjs getStaticProps": {
+    "prefix": "ngspr",
+    "body": [
+      "export const getStaticProps: GetStaticProps = async (${1:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${2:data:null}",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetStaticProps"
+  },
+  "Nextjs getStaticPaths": {
+    "prefix": "ngspa",
+    "body": [
+      "export const getStaticPaths: GetStaticPaths = async () => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tpaths:${1:[]},",
+      "\t\tfallback:${2:false}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetStaticPaths"
+  },
+  "Nextjs getInitialProps": {
+    "prefix": "ngipr",
+    "body": [
+      "${1:${TM_FILENAME_BASE}}.getInitialProps = async (${2:ctx}) => {",
+      "",
+      "\treturn {",
+      "\t\t${3:data:null}",
+      "\t}",
+      "}"
+    ],
+    "description": "Next GetInitialProps"
+  },
+
   // functions with combinations
 
-  "Nextjs typescript arrow function  with getServerSideProps": {
+
+  "Nextjs typescript arrow function  with getServerSideProps(DEPRECATED)": {
     "prefix": "ntsfwserver",
     "body": [
       "import { GetServerSideProps } from 'next';",
@@ -86,7 +290,36 @@
     ],
     "description": "initializing page(arrow function) with getServerSideProps"
   },
-  "Nextjs typescript arrow function with getStaticProps": {
+  "Nextjs typescript arrow function  with getServerSideProps": {
+    "prefix": "nafewserver",
+    "body": [
+      "import { GetServerSideProps } from 'next';",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${2:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "",
+      "export const getServerSideProps:GetServerSideProps = async (${3:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${4:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": "initializing page(arrow function) with getServerSideProps"
+  },
+
+  "Nextjs typescript arrow function with getStaticProps(DEPRECATED)": {
     "prefix": "ntsfwstatic",
     "body": [
       "import {GetStaticProps} from 'next';",
@@ -113,8 +346,36 @@
     ],
     "description": "initializing page(arrow function) with getStaticProps"
   },
+  "Nextjs typescript arrow function with getStaticProps": {
+    "prefix": "nafewstatic",
+    "body": [
+      "import {GetStaticProps} from 'next';",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${2:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export const getStaticProps:GetStaticProps = async (${3:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${4:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": "initializing page(arrow function) with getStaticProps"
+  },
+
   // static generation
-  "Nextjs static generation": {
+  "Nextjs static generation(DEPRECATED)": {
     "prefix": "!!tsstatic",
     "body": [
       "import {GetStaticPaths,GetStaticProps} from 'next';",
@@ -148,7 +409,41 @@
       "export default ${1:${TM_FILENAME_BASE}};"
     ]
   },
-  
+  "Nextjs static generation": {
+    "prefix": "!!static",
+    "body": [
+      "import {GetStaticPaths,GetStaticProps} from 'next';",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${2:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export const getStaticPaths:GetStaticPaths = async () => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tpaths:${3:[]},",
+      "\t\tfallback:${4:false}",
+      "\t}",
+      "}",
+      "export const getStaticProps:GetStaticProps = async (${5:ctx}) => {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${6:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ]
+  },
+
   // import next components
   "Nextjs import for Link component": {
     "prefix": "nil",
@@ -180,14 +475,66 @@
     "body": ["import ${1:dynamic} from 'next/dynamic';"],
     "description": "next import dynamic"
   },
+  // nextjs imported components usage
+  "Nextjs link component defination with href": {
+    "prefix": "nulwhref",
+    "body": ["<Link href='${1:path}'>${2:link}</Link>"],
+    "description": "nextjs usage of link component with href"
+  },
+
+  "Nextjs useRouter component defination": {
+    "prefix": "nuur",
+    "body": ["const ${1:router} = useRouter();"],
+    "description": "nextjs usage of useRouter component"
+  },
+  "Nextjs Head component defination": {
+    "prefix": "nuh",
+    "body": ["<Head>", "\t<title>${1:Title}</title>", "</Head>"],
+    "description": "nextjs usage of Head Component"
+  },
+  "Nextjs Image component defination": {
+    "prefix": "nui",
+    "body": ["<Image src='${1:path}' width='' height='' alt='' />"],
+    "description": "nextjs usage of Image Component"
+  },
+  "Nextjs Dynamic Import defination": {
+    "prefix": "nud",
+    "body": [
+      "const ${1:DynamicComponent} = dynamic(() => import('${2:./path}'))"
+    ],
+    "description": "nextjs usage of Dynamic Import"
+  },
+  "Nextjs Dynamic Import defination with named exports": {
+    "prefix": "nudwne",
+    "body": [
+      "const ${1:DynamicComponent} = dynamic(() =>",
+      "\timport('${2:./path}').then((mod) => mod.${1:DynamicComponent})",
+      ")"
+    ],
+    "description": "nextjs usage of Dynamic Import with named exports"
+  },
 
   // api routes
-  "Nextjs Api route": {
+  "Nextjs Api route (DEPRECATED)": {
     "prefix": "ntsapi",
     "body": [
       "import { NextApiRequest, NextApiResponse } from 'next';",
       "",
-      "export default (${1:req}:NextApiRequest, ${2:res}:NextApiResponse) => {",
+      "export default function handler(${1:req}:NextApiRequest, ${2:res}:NextApiResponse) {",
+      "",
+      "\t${3:req.statusCode = 200}",
+      "",
+      "",
+      "}"
+    ],
+    "description": "Next Api Route"
+  },
+  "Nextjs Api route": {
+    "prefix": "napi",
+    "body": [
+      "import { NextApiRequest, NextApiResponse } from 'next';",
+      "",
+      "export default function handler(${1:req}:NextApiRequest, ${2:res}:NextApiResponse) {",
       "",
       "\t${3:req.statusCode = 200}",
       "",
@@ -198,10 +545,10 @@
   },
 
   // custom app
-  "Nextjs typescript custom app (_app.js)": {
+  "Nextjs typescript custom app (_app.js)(DEPRECATED)": {
     "prefix": "ntscapp",
     "body": [
-      "import {AppProps} from 'next/app'",
+      "import type {AppProps} from 'next/app'",
       "",
       "const MyApp = ({ Component, pageProps }:AppProps) => {",
       "\treturn <Component {...pageProps} />",
@@ -211,31 +558,56 @@
     ],
     "description": "Next Custom App (_app.js)"
   },
-  "Nextjs typescript Custom Document (_document.js)": {
+  "Nextjs typescript custom app (_app.js)": {
+    "prefix": "ncapp",
+    "body": [
+      "import type {AppProps} from 'next/app'",
+      "",
+      "const MyApp = ({ Component, pageProps }:AppProps) => {",
+      "\treturn <Component {...pageProps} />",
+      "}",
+      "",
+      "export default MyApp;"
+    ],
+    "description": "Next Custom App (_app.js)"
+  },
+  "Nextjs typescript Custom Document (_document.js)(DEPRECATED)": {
     "prefix": "ntscdocument",
     "body": [
-      "import Document, { Html, Head, Main, NextScript } from 'next/document'",
+      "import { Html, Head, Main, NextScript } from 'next/document'",
       "",
-      "class MyDocument extends Document {",
-      "\tstatic async getInitialProps(ctx) {",
-      "\t\tconst initialProps = await Document.getInitialProps(ctx)",
-      "\t\treturn { ...initialProps }",
+      "export default function Document() {",
+      "\treturn (",
+      "\t\t<Html>",
+      "\t\t\t<Head/>",
+      "\t\t\t<body>",
+      "\t\t\t\t<Main />",
+      "\t\t\t\t<NextScript />",
+      "\t\t\t</body>",
+      "\t\t</Html>",
+      "\t)",
       "}",
+      ""
+    ],
+    "description": "Next Typescript Custom Document (_document.js)"
+  },
+  "Nextjs typescript Custom Document (_document.js)": {
+    "prefix": "ncdocument",
+    "body": [
+      "import { Html, Head, Main, NextScript } from 'next/document'",
       "",
-      "\trender() {",
-      "\t\treturn (",
-      "\t\t\t<Html>",
-      "\t\t\t\t<Head/>",
-      "\t\t\t\t<body>",
-      "\t\t\t\t\t<Main />",
-      "\t\t\t\t\t<NextScript />",
-      "\t\t\t\t</body>",
-      "\t\t\t</Html>",
-      "\t\t)",
-      "\t}",
+      "export default function Document() {",
+      "\treturn (",
+      "\t\t<Html>",
+      "\t\t\t<Head/>",
+      "\t\t\t<body>",
+      "\t\t\t\t<Main />",
+      "\t\t\t\t<NextScript />",
+      "\t\t\t</body>",
+      "\t\t</Html>",
+      "\t)",
       "}",
-      "",
-      "export default MyDocument;"
+      ""
     ],
     "description": "Next Typescript Custom Document (_document.js)"
   }
