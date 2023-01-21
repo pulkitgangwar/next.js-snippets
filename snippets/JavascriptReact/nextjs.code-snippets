@@ -1,4 +1,143 @@
 {
+  // new easy to use extensions
+  "Nextjs page with server side props": {
+    "prefix": "nspage",
+    "body": [
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${2:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export async function getServerSideProps(${3:ctx}){",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${4:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "Nextjs page with server side props"
+  },
+  "Nextjs page with static side props and static side paths": {
+    "prefix": "nstaticpage",
+    "body": [
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${2:Enter}",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      "",
+      "export async function getStaticPaths() {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tpaths:${3:[]},",
+      "\t\tfallback:${4:false}",
+      "\t}",
+      "}",
+      "export async function getStaticProps(${5:ctx}){",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${6:data:null}",
+      "\t\t}",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "Nextjs page with static props and static paths"
+  },
+  "Nextjs Custom 404 page": {
+    "prefix": "nnotfound",
+    "body": [
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h1>",
+      "\t\t\t\t${2:Page Not Found}",
+      "\t\t\t</h1>",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      ""
+    ],
+    "description": "Nextjs not found page"
+  },
+  "Nextjs Custom 500 page": {
+    "prefix": "nservererror",
+    "body": [
+      "export default function ${1:${TM_FILENAME_BASE}}() {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h1>",
+      "\t\t\t\t${2:Server Error}",
+      "\t\t\t</h1>",
+      "\t\t</div>",
+      "\t);",
+      "}",
+      ""
+    ],
+    "description": "Nextjs server error page"
+  },
+  "Nextjs getServerSideProps()": {
+    "prefix": "ngetServerSideProps",
+    "body": [
+      "export async function getServerSideProps(${1:ctx}){",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${2:data:null}",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Nextjs getServerSideProps function"
+  },
+  "Nextjs getStaticProps()": {
+    "prefix": "ngetStaticProps",
+    "body": [
+      "export async function getStaticProps(${1:ctx}) {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tprops:{",
+      "\t\t\t${2:data:null}",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "Nextjs getStaticProps function"
+  },
+  "Nextjs getStaticPaths()": {
+    "prefix": "ngetStaticPaths",
+    "body": [
+      "export async function getStaticPaths() {",
+      "",
+      "",
+      "\treturn {",
+      "\t\tpaths:${1:[]},",
+      "\t\tfallback:${2:false}",
+      "\t}",
+      "}"
+    ],
+    "description": "Nextjs getStaticPaths function"
+  },
+  "Nextjs use link": {
+    "prefix": "nul",
+    "body": ["<Link href='${1:path}'>${2:link}</Link>"],
+    "description": "Nextjs use link Element"
+  },
+
   // function snippets for pages
   "Nextjs arrow function export at the end": {
     "prefix": "nafe",
@@ -117,47 +256,30 @@
   "Nextjs custom app (_app.js)": {
     "prefix": "ncapp",
     "body": [
-      "// import App from 'next/app'",
-      "",
-      "const MyApp = ({ Component, pageProps }) => {",
+      "export default function MyApp({ Component, pageProps }) {",
       "\treturn <Component {...pageProps} />",
       "}",
-      "",
-      "//MyApp.getInitialProps = async (appContext) => {",
-      "//\t// calls page's `getInitialProps` and fills `appProps.pageProps`",
-      "//\tconst appProps = await App.getInitialProps(appContext);",
-      "//\treturn { ...appProps }",
-      "// }",
-      "",
-      "export default MyApp;"
+      ""
     ],
     "description": "Next Custom App (_app.js)"
   },
   "Nextjs Custom Document (_document.js)": {
     "prefix": "ncdocument",
     "body": [
-      "import Document, { Html, Head, Main, NextScript } from 'next/document'",
+      "import { Html, Head, Main, NextScript } from 'next/document'",
       "",
-      "class MyDocument extends Document {",
-      "\tstatic async getInitialProps(ctx) {",
-      "\t\tconst initialProps = await Document.getInitialProps(ctx)",
-      "\t\treturn { ...initialProps }",
+      "export default function Document() {",
+      "\treturn (",
+      "\t\t<Html>",
+      "\t\t\t<Head/>",
+      "\t\t\t<body>",
+      "\t\t\t\t<Main />",
+      "\t\t\t\t<NextScript />",
+      "\t\t\t</body>",
+      "\t\t</Html>",
+      "\t)",
       "}",
-      "",
-      "\trender() {",
-      "\t\treturn (",
-      "\t\t\t<Html>",
-      "\t\t\t\t<Head/>",
-      "\t\t\t\t<body>",
-      "\t\t\t\t\t<Main />",
-      "\t\t\t\t\t<NextScript />",
-      "\t\t\t\t</body>",
-      "\t\t\t</Html>",
-      "\t\t)",
-      "\t}",
-      "}",
-      "",
-      "export default MyDocument;"
+      ""
     ],
     "description": "Next Custom Document (_document.js)"
   },
@@ -166,7 +288,7 @@
   "Nextjs Api route": {
     "prefix": "napi",
     "body": [
-      "export default (${1:req}, ${2:res}) => {",
+      "export default function handler(${1:req}, ${2:res})  {",
       "",
       "\t${3:req.statusCode = 200}",
       "",
@@ -349,16 +471,10 @@
   // nextjs imported components usage
   "Nextjs link component defination with href": {
     "prefix": "nulwhref",
-    "body": ["<Link href='${1:path}'><a>${2:value}</a></Link>"],
+    "body": ["<Link href='${1:path}'>${2:link}</Link>"],
     "description": "nextjs usage of link component with href"
   },
-  "Nextjs link component defination with href and as": {
-    "prefix": "nulwas",
-    "body": [
-      "<Link href='${1:routepattern}' as='${2:path}'><a>${3:value}</a></Link>"
-    ],
-    "description": "nextjs usage of link component with href and as"
-  },
+
   "Nextjs useRouter component defination": {
     "prefix": "nuur",
     "body": ["const ${1:router} = useRouter();"],
@@ -376,12 +492,18 @@
   },
   "Nextjs Dynamic Import defination": {
     "prefix": "nud",
-    "body": ["const ${1:DynamicComponent} = dynamic(() => import('${2:./path}'))"],
+    "body": [
+      "const ${1:DynamicComponent} = dynamic(() => import('${2:./path}'))"
+    ],
     "description": "nextjs usage of Dynamic Import"
   },
   "Nextjs Dynamic Import defination with named exports": {
     "prefix": "nudwne",
-    "body": ["const ${1:DynamicComponent} = dynamic(() =>", "\timport('${2:./path}').then((mod) => mod.${1:DynamicComponent})", ")"],
+    "body": [
+      "const ${1:DynamicComponent} = dynamic(() =>",
+      "\timport('${2:./path}').then((mod) => mod.${1:DynamicComponent})",
+      ")"
+    ],
     "description": "nextjs usage of Dynamic Import with named exports"
-  },
+  }
 }
