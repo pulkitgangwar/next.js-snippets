@@ -2,6 +2,31 @@
 
 All notable changes to the "nextjs-snippets" extension will be documented in this file.
 
+## 1.0.0 - 2023/01/21
+
+### Added 
+
+- added **`nspage`** (_nextjs page with server side props)
+- added **`nstaticpage`** (_nextjs page with static props and paths)
+- added **`nnotfound`** (_nextjs not found page)
+- added **`nservererror`** (_nextjs server error page)
+- added **`ngetServerSideProps`** (_nextjs server side props function)
+- added **`ngetStaticProps`** (_nextjs static props function)
+- added **`ngetStaticPaths`** (_nextjs static paths function)
+- added deprecation warning on typescript snippets
+- added javascript snippets to typescript snippets
+
+### Updated
+
+- updated **`nul`** (_nextjs use link element)
+- updated **`ncapp`** (_nextjs _app file)
+- updated **`ncdocument`** (_nextjs _document file)
+
+### Removed 
+
+- removed nulwas snippet
+
+
 ## 0.0.5 - 2021/07/26
 
 ### Added

@@ -2,7 +2,7 @@
   "name": "nextjs-snippets",
   "displayName": "Next.js snippets",
   "description": "snippets for nextjs",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.46.0"
   },
