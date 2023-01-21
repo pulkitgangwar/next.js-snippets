@@ -14,10 +14,223 @@ Latest snippets for next.js
 - reload vscode
 - snippets will be ready to use
 
-## Language
 
-- [JavascriptReact](#javascript)
-- [TypescriptReact](#typescript)
+
+# New Snippets
+
+### `nspage` (nextjs page with getServerSideProps)
+
+#### Javascript
+
+```js
+export default function Test() {
+  return <div>Enter</div>;
+}
+
+export async function getServerSideProps(ctx) {
+  return {
+    props: {
+      data: null,
+    },
+  };
+}
+```
+
+#### Typescript
+
+```ts
+import { GetServerSideProps } from "next";
+
+const Test = () => {
+  return <div>Enter</div>;
+};
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  return {
+    props: {},
+  };
+};
+
+export default Test;
+```
+
+### `nstaticpage` (nextjs page with getStaticProps and getStaticPaths)
+
+#### Javascript
+
+```js
+export default function Test() {
+  return <div>Enter</div>;
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: false,
+  };
+}
+export async function getStaticProps(ctx) {
+  return {
+    props: {
+      data: null,
+    },
+  };
+}
+```
+
+#### Typescript
+
+```ts
+import { GetStaticPaths, GetStaticProps } from "next";
+
+const test = () => {
+  return <div>Enter</div>;
+};
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return {
+    paths: [],
+    fallback: false,
+  };
+};
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  return {
+    props: {},
+  };
+};
+
+export default test;
+```
+
+### `nnotfound` (nextjs not found page)
+
+#### Javascript
+
+```js
+export default function test() {
+    return (
+        <div>
+            <h1>
+                Page Not Found
+            </h1>
+        </div>
+    );
+}
+```
+
+### `nservererror` (nextjs server error page)
+
+#### Javascript
+
+```js
+export default function test() {
+    return (
+        <div>
+            <h1>
+                Server Error
+            </h1>
+        </div>
+    );
+}
+```
+
+### `ngetServerSideProps` (nextjs getServerSideProps function)
+
+#### Javascript
+
+```js
+export async function getServerSideProps(ctx){
+
+
+    return {
+        props:{
+            data:null
+        }
+    }
+}
+```
+
+#### Typescript
+
+```ts
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+
+
+    return {
+        props:{
+
+        }
+    }
+}
+```
+
+### `ngetStaticProps` (nextjs getStaticProps function)
+
+#### Javascript
+
+```js
+export async function getStaticProps(ctx) {
+
+
+    return {
+        props:{
+            data:null
+        }
+    }
+}
+```
+
+#### Typescript
+
+```ts
+export const getStaticProps: GetStaticProps = (ctx) => {
+
+
+    return {
+        props:{
+
+        }
+    }
+}
+```
+
+### `ngetStaticPaths` (nextjs getStaticPaths function)
+
+#### Javascript
+
+```js
+export async function getStaticPaths() {
+
+
+    return {
+        paths:[],
+        fallback:false
+    }
+}
+```
+
+#### Typescript
+
+```ts
+export const getStaticPaths: GetStaticPaths = () => {
+
+
+    return {
+        paths:[],
+        fallback:false
+    }
+}
+```
+
+### `nul` (nextjs use link element)
+
+#### Javascript
+
+```js
+<Link href='path'>link</Link>
+```
+
+
 
 # Javascript
 
@@ -27,12 +240,8 @@ Latest snippets for next.js
 
 ```js
 const FileName = () => {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
+  return <div>CONTENT</div>;
+};
 
 export default FileName;
 ```
@@ -41,23 +250,15 @@ export default FileName;
 
 ```js
 export default () => {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
+  return <div>CONTENT</div>;
+};
 ```
 
 ### `nfe` (nextjs normal function (export at the end))
 
 ```js
 function FileName() {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
+  return <div>CONTENT</div>;
 }
 
 export default FileName;
@@ -66,12 +267,8 @@ export default FileName;
 ### `nf` (nextjs normal function )
 
 ```js
-export default function ()  {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
+export default function () {
+  return <div>CONTENT</div>;
 }
 ```
 
@@ -79,9 +276,20 @@ export default function ()  {
 
 ### `ngsspr` (nextjs getServerSideProps)
 
+#### Javascript 
 ```js
- export const getServerSideProps = async (ctx) => {
+export const getServerSideProps = async (ctx) => {
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
+```
 
+#### Typescript
+```ts
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return {
         props:{
             data:null
@@ -92,9 +300,22 @@ export default function ()  {
 
 ### `ngspr` (nextjs getStaticProps)
 
-```js
- export const getStaticProps = async (ctx) => {
+#### Javascript
 
+```js
+export const getStaticProps = async (ctx) => {
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
+```
+
+#### Typescript
+
+```ts
+export const getStaticProps: GetStaticProps = async (ctx) => {
     return {
         props:{
             data:null
@@ -105,9 +326,21 @@ export default function ()  {
 
 ### `ngspa` (nextjs getStaticPaths)
 
+#### Javascript
+
 ```js
 export const getStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: false,
+  };
+};
+```
 
+#### Typescript
+
+```ts
+export const getStaticPaths: GetStaticPaths = async () => {
     return {
         paths:[],
         fallback:false
@@ -130,57 +363,66 @@ FileName.getInitialProps = async (ctx) => {
 
 ### `ncapp` (nextjs custom app)
 
-```js
-// import App from 'next/app'
+#### Javascript
 
-const MyApp = ({ Component pageProps }) => {
+```js
+export default function MyApp({ Component, pageProps }) {
     return <Component {...pageProps} />
 }
+```
 
-//MyApp.getInitialProps = async (appContext) => {
-// calls page's `getInitialProps` and fills `appProps.pageProps`
-// const appProps = await App.getInitialProps(appContext);
-// return { ...appProps }
-// }
+#### Typescript
+
+```ts
+import type {AppProps} from 'next/app'
+
+const MyApp = ({ Component, pageProps }:AppProps) => {
+    return <Component {...pageProps} />
+}
 
 export default MyApp;
 ```
 
 ### `ncdocument` (nextjs custom document)
 
+#### Javascript
+
 ```js
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from 'next/document'
 
-class MyDocument extends Document {
-    static async getInitialProps(ctx) {
-        const initialProps = await Document.getInitialProps(ctx)
-        return { ...initialProps }
-    }
-
-    render() {
-        return (
-            <Html>
-                <Head/>
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
-            </Html>
-        )
-    }
+export default function Document() {
+    return (
+        <Html>
+            <Head/>
+            <body>
+                <Main />
+                <NextScript />
+            </body>
+        </Html>
+    )
 }
-
-export default MyDocument;
 ```
+
 
 ## Nextjs api routes
 
 ### `napi` (nextjs api route)
 
-```javascritreact
-export default (req,res) => {
+#### Javascript
 
+```js
+export default function handler(req, res)  {
+    req.statusCode = 200
+}
+```
 
+#### Typescript
+
+```ts
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req:NextApiRequest, res:NextApiResponse) {
+    req.statusCode = 200
 }
 ```
 
@@ -188,45 +430,63 @@ export default (req,res) => {
 
 ### `nafewserver` (nextjs arrow function (export at the end) with getServerSideProps)
 
+#### Javascript
+
 ```js
 const FileName = () => {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
+  return <div>CONTENT</div>;
+};
 
 export const getServerSideProps = async (ctx) => {
-
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 
 export default FileName;
 ```
 
-### `nfewserver` (nextjs normal function (export at the end) with getServerSideProps)
+#### Typescript
 
-```js
-function FileName() {
+```ts
+import { GetServerSideProps } from 'next';
+
+const Test = () => {
     return (
         <div>
-            CONTENT
+            Enter
         </div>
     );
 }
 
-export async function getServerSideProps(ctx){
-
+export const getServerSideProps:GetServerSideProps = async (ctx) => {
     return {
         props:{
             data:null
         }
     }
+}
+
+export default Test;
+```
+
+### `nfewserver` (nextjs normal function (export at the end) with getServerSideProps)
+
+#### Javascript 
+
+```js
+function FileName() {
+  return <div>CONTENT</div>;
+}
+
+export async function getServerSideProps(ctx) {
+  return {
+    props: {
+      data: null,
+    },
+  };
 }
 
 export default FileName;
@@ -234,45 +494,65 @@ export default FileName;
 
 ### `nafewstatic` (nextjs arrow function (export at the end) with getStaticProps)
 
+#### Javascript
+
 ```js
 const FileName = () => {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
+  return <div>CONTENT</div>;
+};
 
 export const getStaticProps = async (ctx) => {
-
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 
 export default FileName;
 ```
 
-### `nfewstatic` (nextjs normal function (export at the end) with getStaticProps)
+#### Typescript
 
-```js
-function FileName() {
+```ts
+import {GetStaticProps} from 'next';
+
+const Test = () => {
     return (
         <div>
-            CONTENT
+            Enter
         </div>
     );
 }
 
-export async function getStaticProps(ctx){
+export const getStaticProps:GetStaticProps = async (ctx) => {
+
 
     return {
         props:{
             data:null
         }
     }
+}
+
+export default Test;
+```
+
+### `nfewstatic` (nextjs normal function (export at the end) with getStaticProps)
+
+#### Javascript
+
+```js
+function FileName() {
+  return <div>CONTENT</div>;
+}
+
+export async function getStaticProps(ctx) {
+  return {
+    props: {
+      data: null,
+    },
+  };
 }
 
 export default FileName;
@@ -282,25 +562,51 @@ export default FileName;
 
 ### `!!static` (initializing function with getStaticPaths and getStaticProps)
 
+#### Javascript
+
 ```js
 const FileName = () => {
+  return <div>CONTENT</div>;
+};
+
+export const getStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async (ctx) => {
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
+
+export default FileName;
+```
+
+#### Typescript
+
+```ts
+import {GetStaticPaths,GetStaticProps} from 'next';
+
+const Test = () => {
     return (
         <div>
-            CONTENT
+            Enter
         </div>
     );
 }
 
-export const getStaticPaths = async () => {
-
+export const getStaticPaths:GetStaticPaths = async () => {
     return {
         paths:[],
         fallback:false
     }
 }
-
-export const getStaticProps = async (ctx) => {
-
+export const getStaticProps:GetStaticProps = async (ctx) => {
     return {
         props:{
             data:null
@@ -308,7 +614,7 @@ export const getStaticProps = async (ctx) => {
     }
 }
 
-export default FileName;
+export default Test;
 ```
 
 ## Importing Components
@@ -316,25 +622,25 @@ export default FileName;
 ### `nil` (nextjs import link)
 
 ```js
-import Link from 'next/link';
+import Link from "next/link";
 ```
 
 ### `nir` (nextjs import router(default))
 
 ```js
-import Router from 'next/router';
+import Router from "next/router";
 ```
 
 ### `niur` (nextjs import useRouter)
 
 ```js
-import {useRouter} from 'next/router';
+import { useRouter } from "next/router";
 ```
 
 ### `nih` (nextjs import Head)
 
 ```js
-import Head from 'next/head';
+import Head from "next/head";
 ```
 
 ## Imported Components Usage
@@ -342,13 +648,9 @@ import Head from 'next/head';
 ### `nulwhref` (nextjs use link with href)
 
 ```js
-<Link href="path"><a>Value</a></Link>
-```
-
-### `nulwas` (nextjs use link with as)
-
-```js
-<Link href="routepattern" as="path"><a>Value</a></Link>
+<Link href="path">
+  <a>Value</a>
+</Link>
 ```
 
 ### `nuur` (nextjs use useRouter)
@@ -360,128 +662,70 @@ const router = useRouter();
 ### `nuh` (nextjs use Head )
 
 ```js
-<Head><title>Title</title></Head>
+<Head>
+  <title>Title</title>
+</Head>
 ```
 
-# Typescript
-
-## Page initialization snippets
-
-### `nafe` (nextjs arrow function (export at the end))
+### `nul` (nextjs use Image component)
 
 ```js
-const FileName = () => {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
-
-export default FileName;
+<Image src='path' width='width' height='height' alt='alt' />
 ```
 
-### `naf` (nextjs arrow function)
 
-```js
-export default () => {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
-```
-
-### `nafe` (nextjs normal function (export at the end))
-
-```js
-function FileName() {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
-
-export default FileName;
-```
-
-### `nf` (nextjs normal function )
-
-```js
-export default function ()  {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
-```
+## Deprecated Typescript Snippets
 
 ## Nextjs page initialization function with Nextjs functions
 
-### `ntsfwserver` (nextjs typescript function with getServerSideProps)
+### `ntsfwserver` (nextjs typescript function with getServerSideProps (DEPRECATED))
 
 ```ts
-import {GetServerSideProps} from 'next';
+import { GetServerSideProps } from "next";
 
 const FileName = () => {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
+  return <div>CONTENT</div>;
+};
 
-export const getServerSideProps:GetServerSideProps = async (ctx) => {
-
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 
 export default FileName;
 ```
 
-### `ntsfwstatic` (nextjs typescript function with getStaticProps)
+### `ntsfwstatic` (nextjs typescript function with getStaticProps (DEPRECATED))
 
 ```ts
-import {GetStaticProps} from 'next';
+import { GetStaticProps } from "next";
 
 const FileName = () => {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
+  return <div>CONTENT</div>;
+};
 
-export const getStaticProps:GetStaticProps = async (ctx) => {
-
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 
 export default FileName;
 ```
 
 ## Nextjs api routes
 
-### `ntsapi` (nextjs typescript api route)
+### `ntsapi` (nextjs typescript api route (DEPRECATED))
 
 ```ts
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
-
-
-}
+export default (req: NextApiRequest, res: NextApiResponse) => {};
 ```
 
 ## Nextjs Custom app and document (\_app.js,\_document.js)
@@ -498,28 +742,28 @@ const MyApp = ({ Component pageProps }:AppProps) => {
 export default MyApp;
 ```
 
-### `ntscdocument` (nextjs typescript custom document)
+### `ntscdocument` (nextjs typescript custom document (DEPRECATED))
 
 ```js
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
-    static async getInitialProps(ctx) {
-        const initialProps = await Document.getInitialProps(ctx)
-        return { ...initialProps }
-    }
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
 
-    render() {
-        return (
-            <Html>
-                <Head/>
-                <body>
-                    <Main />
-                    <NextScript />
-                </body>
-            </Html>
-        )
-    }
+  render() {
+    return (
+      <Html>
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
 
 export default MyDocument;
@@ -527,72 +771,28 @@ export default MyDocument;
 
 ## Static generation snippet
 
-### `!!tsstatic` (initializing function with getStaticPaths and getStaticProps(typescript))
+### `!!tsstatic` (initializing function with getStaticPaths and getStaticProps(typescript) (DEPRECATED))
 
 ```ts
-import {GetStaticPaths,GetStaticProps} from 'next';
+import { GetStaticPaths, GetStaticProps } from "next";
 const FileName = () => {
-    return (
-        <div>
-            CONTENT
-        </div>
-    );
-}
+  return <div>CONTENT</div>;
+};
 
-export const getStaticPaths:GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: false,
+  };
+};
 
-    return {
-        paths:[],
-        fallback:false
-    }
-}
-
-export const getStaticProps:GetStaticProps = async (ctx) => {
-
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 
 export default FileName;
-```
-
-## Importing Components
-
-### `nil` (nextjs import link)
-
-```js
-import Link from 'next/link';
-```
-
-### `nir` (nextjs import router(default))
-
-```js
-import Router from 'next/router';
-```
-
-### `niur` (nextjs import useRouter)
-
-```js
-import {useRouter} from 'next/router';
-```
-
-### `nih` (nextjs import Head)
-
-```js
-import Head from 'next/head';
-```
-
-### `nii` (nextjs import Image)
-
-```js
-import Image from 'next/image';
-```
-
-### `nid` (nextjs import dynamic)
-
-```js
-import dynamic from 'next/dynamic';
 ```
