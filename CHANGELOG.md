@@ -2,6 +2,12 @@
 
 All notable changes to the "nextjs-snippets" extension will be documented in this file.
 
+## 1.0.1 - 2023/03/16
+
+### Updated
+
+- Name of the extension from next.js snippets to nextjs snippets
+
 ## 1.0.0 - 2023/01/21
 
 ### Added 
