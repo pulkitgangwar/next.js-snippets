@@ -1,6 +1,6 @@
-# Next.js Snippets
+# Nextjs Snippets
 
-Latest snippets for next.js
+Latest snippets for nextjs
 
 ![next js-snippets-gif](https://user-images.githubusercontent.com/50038851/85401251-59c46400-b577-11ea-9eb3-a8ed916c711e.gif)
 
