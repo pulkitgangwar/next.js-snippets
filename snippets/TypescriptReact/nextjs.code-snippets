@@ -194,7 +194,7 @@
       "export default function ${1:${TM_FILENAME_BASE}}() {",
       "\treturn (",
       "\t\t<div>",
-      "\t\t\t${1:Enter}",
+      "\t\t\t${2:Enter}",
       "\t\t</div>",
       "\t);",
       "}"
