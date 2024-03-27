@@ -6,11 +6,9 @@ Latest snippets for nextjs
 
 ## Installation
 
-- install the extension
+- [install](https://marketplace.visualstudio.com/items?itemName=PulkitGangwar.nextjs-snippets) the extension
 - reload vscode
 - snippets will be ready to use
-
-
 
 # New Snippets
 
