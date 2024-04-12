@@ -1,4 +1,132 @@
 {
+  // nextjs app router
+  "Nextjs app router root layout": {
+    "prefix": "narootlayout",
+    "body": [
+      "export default function RootLayout({children}: {children: React.ReactNode}) {",
+      "\treturn (",
+      "\t\t<html lang=\"en\">",
+      "\t\t\t<body>",
+      "\t\t\t\t<main>",
+      "\t\t\t\t\t${1:{children\\}}",
+      "\t\t\t\t</main>",
+      "\t\t\t</body>",
+      "\t\t</html>",
+      "\t);",
+      "}"
+    ],
+    "description": "Nextjs app router root layout"
+  },
+  "Nextjs app router layout": {
+    "prefix": "nalayout",
+    "body": [
+      "export default function Layout({children}: {children: React.ReactNode}) {",
+      "\treturn (",
+      "\t\t<section>",
+      "\t\t\t${1:{children\\}}",
+      "\t\t</section>",
+      "\t);",
+      "}"
+    ],
+    "description": "Nextjs app router layout"
+  },
+  "Nextjs app router page": {
+    "prefix": "napage",
+    "body": [
+      "export default function ${1:Page}() {",
+      "\treturn (",
+      "\t\t${2:<div></div>}",
+      "\t);",
+      "}"
+    ],
+    "description": "Nextjs app router page"
+  },
+  "Nextjs app router loading": {
+    "prefix": "naloading",
+    "body": [
+      "export default function Loading() {",
+      "\treturn (",
+      "\t\t<${1:div}>",
+      "\t\t\t${2:Loading...}",
+      "\t\t</${1:div}>",
+      "\t);",
+      "}"
+    ],
+    "description": "Nextjs app router loading"
+  },
+
+  "Nextjs app router error": {
+    "prefix": "naerror",
+    "body": [
+      "\"use client\"",
+      "import { useEffect } from \"react\"",
+      "",
+      "export default function ${1:Error}({",
+      "\t error,",
+      "\t reset",
+      "}: {",
+      "\t error: Error & { digest?: string },",
+      "\t reset: () => void",
+      "}) {",
+      "",
+      "\t useEffect(() => {",
+      "\t\t console.error(error)",
+      "\t },[error])",
+      "",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h2>Something went wrong!</h2>",
+      "\t\t\t<button onClick={reset}>",
+      "\t\t\t\t Try again",
+      "\t\t\t</button>",
+      "\t\t</div>",
+      "\t);",
+      "}"
+    ],
+    "description": "Nextjs app router error"
+  },
+
+  "Nextjs app router global error": {
+    "prefix": "naglobalerror",
+    "body": [
+      "\"use client\"",
+      "",
+      "",
+      "export default function ${1:GlobalError}({",
+      "\t error,",
+      "\t reset",
+      "}: {",
+      "\t error: Error & { digest?: string },",
+      "\t reset: () => void",
+      "}) {",
+      "",
+      "\treturn (",
+      "\t\t<html>",
+      "\t\t\t<body>",
+      "\t\t\t\t<h2>Something went wrong!</h2>",
+      "\t\t\t\t<button onClick={reset}>",
+      "\t\t\t\t\t Try again",
+      "\t\t\t\t</button>",
+      "\t\t\t</body>",
+      "\t\t</html>",
+      "\t);",
+      "}"
+    ],
+    "description": "Nextjs app router global error"
+  },
+  "Nextjs app router template": {
+    "prefix": "natemplate",
+    "body": [
+      "export default function ${1:Template}({children}: { children: React.ReactNode }) {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t${2:{children\\}}",
+      "\t\t</div>",
+      "\t);",
+      "}"
+    ],
+    "description": "Nextjs app router template"
+  },
   // new easy to use extensions
   "Nextjs page with server side props": {
     "prefix": "nspage",
