@@ -102,13 +102,11 @@ export default test;
 
 ```js
 export default function test() {
-    return (
-        <div>
-            <h1>
-                Page Not Found
-            </h1>
-        </div>
-    );
+  return (
+    <div>
+      <h1>Page Not Found</h1>
+    </div>
+  );
 }
 ```
 
@@ -118,13 +116,11 @@ export default function test() {
 
 ```js
 export default function test() {
-    return (
-        <div>
-            <h1>
-                Server Error
-            </h1>
-        </div>
-    );
+  return (
+    <div>
+      <h1>Server Error</h1>
+    </div>
+  );
 }
 ```
 
@@ -133,14 +129,12 @@ export default function test() {
 #### Javascript
 
 ```js
-export async function getServerSideProps(ctx){
-
-
-    return {
-        props:{
-            data:null
-        }
-    }
+export async function getServerSideProps(ctx) {
+  return {
+    props: {
+      data: null,
+    },
+  };
 }
 ```
 
@@ -148,14 +142,10 @@ export async function getServerSideProps(ctx){
 
 ```ts
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-
-
-    return {
-        props:{
-
-        }
-    }
-}
+  return {
+    props: {},
+  };
+};
 ```
 
 ### `ngetStaticProps` (nextjs getStaticProps function)
@@ -164,13 +154,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 ```js
 export async function getStaticProps(ctx) {
-
-
-    return {
-        props:{
-            data:null
-        }
-    }
+  return {
+    props: {
+      data: null,
+    },
+  };
 }
 ```
 
@@ -178,14 +166,10 @@ export async function getStaticProps(ctx) {
 
 ```ts
 export const getStaticProps: GetStaticProps = (ctx) => {
-
-
-    return {
-        props:{
-
-        }
-    }
-}
+  return {
+    props: {},
+  };
+};
 ```
 
 ### `ngetStaticPaths` (nextjs getStaticPaths function)
@@ -194,12 +178,10 @@ export const getStaticProps: GetStaticProps = (ctx) => {
 
 ```js
 export async function getStaticPaths() {
-
-
-    return {
-        paths:[],
-        fallback:false
-    }
+  return {
+    paths: [],
+    fallback: false,
+  };
 }
 ```
 
@@ -207,13 +189,11 @@ export async function getStaticPaths() {
 
 ```ts
 export const getStaticPaths: GetStaticPaths = () => {
-
-
-    return {
-        paths:[],
-        fallback:false
-    }
-}
+  return {
+    paths: [],
+    fallback: false,
+  };
+};
 ```
 
 ### `nul` (nextjs use link element)
@@ -221,10 +201,8 @@ export const getStaticPaths: GetStaticPaths = () => {
 #### Javascript
 
 ```js
-<Link href='path'>link</Link>
+<Link href="path">link</Link>
 ```
-
-
 
 # Javascript
 
@@ -270,7 +248,8 @@ export default function () {
 
 ### `ngsspr` (nextjs getServerSideProps)
 
-#### Javascript 
+#### Javascript
+
 ```js
 export const getServerSideProps = async (ctx) => {
   return {
@@ -282,14 +261,15 @@ export const getServerSideProps = async (ctx) => {
 ```
 
 #### Typescript
+
 ```ts
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 ```
 
 ### `ngspr` (nextjs getStaticProps)
@@ -310,12 +290,12 @@ export const getStaticProps = async (ctx) => {
 
 ```ts
 export const getStaticProps: GetStaticProps = async (ctx) => {
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 ```
 
 ### `ngspa` (nextjs getStaticPaths)
@@ -335,11 +315,11 @@ export const getStaticPaths = async () => {
 
 ```ts
 export const getStaticPaths: GetStaticPaths = async () => {
-    return {
-        paths:[],
-        fallback:false
-    }
-}
+  return {
+    paths: [],
+    fallback: false,
+  };
+};
 ```
 
 ### `ngipr` (nextjs getInitialProps)
@@ -361,18 +341,18 @@ FileName.getInitialProps = async (ctx) => {
 
 ```js
 export default function MyApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 ```
 
 #### Typescript
 
 ```ts
-import type {AppProps} from 'next/app'
+import type { AppProps } from "next/app";
 
-const MyApp = ({ Component, pageProps }:AppProps) => {
-    return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }: AppProps) => {
+  return <Component {...pageProps} />;
+};
 
 export default MyApp;
 ```
@@ -382,21 +362,92 @@ export default MyApp;
 #### Javascript
 
 ```js
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
-    return (
-        <Html>
-            <Head/>
-            <body>
-                <Main />
-                <NextScript />
-            </body>
-        </Html>
-    )
+  return (
+    <Html>
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
 }
 ```
 
+## Nextjs route handlers
+
+### `nrget` (nextjs route handler get request)
+
+#### Javascript
+
+```js
+export async function GET(request) {}
+```
+
+#### Typescript
+
+```ts
+export async function GET(request: Request) {}
+```
+
+### `nrpost` (nextjs route handler post request)
+
+#### Javascript
+
+```js
+export async function POST(request) {}
+```
+
+#### Typescript
+
+```ts
+export async function POST(request: Request) {}
+```
+
+### `nrput` (nextjs route handler put request)
+
+#### Javascript
+
+```js
+export async function PUT(request) {}
+```
+
+#### Typescript
+
+```ts
+export async function PUT(request: Request) {}
+```
+
+### `nrpatch` (nextjs route handler patch request)
+
+#### Javascript
+
+```js
+export async function PATCH(request) {}
+```
+
+#### Typescript
+
+```ts
+export async function PATCH(request: Request) {}
+```
+
+### `nrdelete` (nextjs route handler delete request)
+
+#### Javascript
+
+```js
+export async function DELETE(request) {}
+```
+
+#### Typescript
+
+```ts
+export async function DELETE(request: Request) {}
+```
 
 ## Nextjs api routes
 
@@ -405,18 +456,18 @@ export default function Document() {
 #### Javascript
 
 ```js
-export default function handler(req, res)  {
-    req.statusCode = 200
+export default function handler(req, res) {
+  req.statusCode = 200;
 }
 ```
 
 #### Typescript
 
 ```ts
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default function handler(req:NextApiRequest, res:NextApiResponse) {
-    req.statusCode = 200
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  req.statusCode = 200;
 }
 ```
 
@@ -445,30 +496,26 @@ export default FileName;
 #### Typescript
 
 ```ts
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps } from "next";
 
 const Test = () => {
-    return (
-        <div>
-            Enter
-        </div>
-    );
-}
+  return <div>Enter</div>;
+};
 
-export const getServerSideProps:GetServerSideProps = async (ctx) => {
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 
 export default Test;
 ```
 
 ### `nfewserver` (nextjs normal function (export at the end) with getServerSideProps)
 
-#### Javascript 
+#### Javascript
 
 ```js
 function FileName() {
@@ -509,25 +556,19 @@ export default FileName;
 #### Typescript
 
 ```ts
-import {GetStaticProps} from 'next';
+import { GetStaticProps } from "next";
 
 const Test = () => {
-    return (
-        <div>
-            Enter
-        </div>
-    );
-}
+  return <div>Enter</div>;
+};
 
-export const getStaticProps:GetStaticProps = async (ctx) => {
-
-
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 
 export default Test;
 ```
@@ -584,29 +625,25 @@ export default FileName;
 #### Typescript
 
 ```ts
-import {GetStaticPaths,GetStaticProps} from 'next';
+import { GetStaticPaths, GetStaticProps } from "next";
 
 const Test = () => {
-    return (
-        <div>
-            Enter
-        </div>
-    );
-}
+  return <div>Enter</div>;
+};
 
-export const getStaticPaths:GetStaticPaths = async () => {
-    return {
-        paths:[],
-        fallback:false
-    }
-}
-export const getStaticProps:GetStaticProps = async (ctx) => {
-    return {
-        props:{
-            data:null
-        }
-    }
-}
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: false,
+  };
+};
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  return {
+    props: {
+      data: null,
+    },
+  };
+};
 
 export default Test;
 ```
@@ -664,9 +701,8 @@ const router = useRouter();
 ### `nul` (nextjs use Image component)
 
 ```js
-<Image src='path' width='width' height='height' alt='alt' />
+<Image src="path" width="width" height="height" alt="alt" />
 ```
-
 
 ## Deprecated Typescript Snippets
 

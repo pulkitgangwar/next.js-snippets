@@ -2,6 +2,17 @@
 
 All notable changes to the "nextjs-snippets" extension will be documented in this file.
 
+## 1.0.2 - 
+
+### Added 
+
+- added **`nrget`** (nextjs route handler get request)
+- added **`nrpost`** (nextjs route handler post request)
+- added **`nrput`** (nextjs route handler put request)
+- added **`nrpatch`** (nextjs route handler patch request)
+- added **`nrdelete`** (nextjs route handler delete request)
+
+
 ## 1.0.1 - 2023/03/16
 
 ### Updated
