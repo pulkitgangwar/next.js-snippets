@@ -283,6 +283,32 @@
     ],
     "description": "Next Custom Document (_document.js)"
   },
+  // route handlers (nextjs 13)
+  "Nextjs route handler get request": {
+    "prefix": "nrget",
+    "body": ["export async function GET(${1:request}) {", "\t${2:}", "}"],
+    "description": "Nextjs get request route handler"
+  },
+  "Nextjs route handler post request": {
+    "prefix": "nrpost",
+    "body": ["export async function POST(${1:request}) {", "\t${2:}", "}"],
+    "description": "Nextjs post request route handler"
+  },
+  "Nextjs route handler put request": {
+    "prefix": "nrput",
+    "body": ["export async function PUT(${1:request}) {", "\t${2:}", "}"],
+    "description": "Nextjs put request route handler"
+  },
+  "Nextjs route handler patch request": {
+    "prefix": "nrpatch",
+    "body": ["export async function PATCH(${1:request}) {", "\t${2:}", "}"],
+    "description": "Nextjs patch request route handler"
+  },
+  "Nextjs route handler delete request": {
+    "prefix": "nrdelete",
+    "body": ["export async function DELETE(${1:request}) {", "\t${2:}", "}"],
+    "description": "Nextjs delete request route handler"
+  },
 
   // api routes
   "Nextjs Api route": {
