@@ -10,7 +10,185 @@ Latest snippets for nextjs
 - reload vscode
 - snippets will be ready to use
 
-# New Snippets
+# App Directory Snippets
+
+### `narootlayout` (nextjs app directory root layout)
+
+#### Javascript
+
+```js
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>
+        <main>{children}</main>
+      </body>
+    </html>
+  );
+}
+```
+
+#### Typescript
+
+```ts
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <main>{children}</main>
+      </body>
+    </html>
+  );
+}
+```
+
+### `nalayout` (nextjs app directory layout)
+
+#### Javascript
+
+```js
+export default function Layout({ children }) {
+  return <section>{children}</section>;
+}
+```
+
+#### Typescript
+
+```ts
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return <section>{children}</section>;
+}
+```
+
+### `napage` (nextjs app directory page)
+
+```js
+export default function Page() {
+  return <div></div>;
+}
+```
+
+### `naloading` (nextjs app directory loading)
+
+```js
+export default function Loading() {
+  return <div>Loading...</div>;
+}
+```
+
+### `naerror` (nextjs app directory error)
+
+#### Javascript
+
+```js
+"use client";
+import { useEffect } from "react";
+
+export default function Error({ error, reset }) {
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
+
+  return (
+    <div>
+      <h2>Something went wrong!</h2>
+      <button onClick={reset}>Try again</button>
+    </div>
+  );
+}
+```
+
+#### Typescript
+
+```ts
+"use client";
+import { useEffect } from "react";
+
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
+
+  return (
+    <div>
+      <h2>Something went wrong!</h2>
+      <button onClick={reset}>Try again</button>
+    </div>
+  );
+}
+```
+
+### `naglobalerror` (nextjs app directory global error)
+
+#### Javascript
+
+```js
+"use client";
+
+export default function GlobalError({ error, reset }) {
+  return (
+    <html>
+      <body>
+        <h2>Something went wrong!</h2>
+        <button onClick={reset}>Try again</button>
+      </body>
+    </html>
+  );
+}
+```
+
+#### Typescript
+
+```ts
+"use client";
+
+export default function GlobalError({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  return (
+    <html>
+      <body>
+        <h2>Something went wrong!</h2>
+        <button onClick={reset}>Try again</button>
+      </body>
+    </html>
+  );
+}
+```
+
+### `natemplate` (nextjs app directory template)
+
+#### Javascript
+
+```js
+export default function Template({ children }) {
+  return <div>{children}</div>;
+}
+```
+
+#### Typescript
+
+```ts
+export default function Template({ children }: { children: React.ReactNode }) {
+  return <div>{children}</div>;
+}
+```
+
+# Snippets
 
 ### `nspage` (nextjs page with getServerSideProps)
 
