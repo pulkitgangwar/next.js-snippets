@@ -2,9 +2,9 @@
   "name": "nextjs-snippets",
   "displayName": "Nextjs snippets",
   "description": "snippets for nextjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
-    "vscode": "^1.46.0"
+    "vscode": "^1.88.1"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,10 @@
     "nextjs",
     "next.js",
     "next-js",
+    "nextjs13",
+    "nextjs 13",
+    "nextjs14",
+    "nextjs 14",
     "snippets",
     "nextjs snippets",
     "next.js snippets",
