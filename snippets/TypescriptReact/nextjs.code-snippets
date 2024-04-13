@@ -3,12 +3,12 @@
   "Nextjs app router root layout": {
     "prefix": "narootlayout",
     "body": [
-      "export default function RootLayout({children}: {children: React.ReactNode}) {",
+      "export default function ${1:RootLayout}({children}: {children: React.ReactNode}) {",
       "\treturn (",
       "\t\t<html lang=\"en\">",
       "\t\t\t<body>",
       "\t\t\t\t<main>",
-      "\t\t\t\t\t${1:{children\\}}",
+      "\t\t\t\t\t${2:{children\\}}",
       "\t\t\t\t</main>",
       "\t\t\t</body>",
       "\t\t</html>",
@@ -20,10 +20,10 @@
   "Nextjs app router layout": {
     "prefix": "nalayout",
     "body": [
-      "export default function Layout({children}: {children: React.ReactNode}) {",
+      "export default function ${1:Layout}({children}: {children: React.ReactNode}) {",
       "\treturn (",
       "\t\t<section>",
-      "\t\t\t${1:{children\\}}",
+      "\t\t\t${2:{children\\}}",
       "\t\t</section>",
       "\t);",
       "}"
@@ -44,11 +44,11 @@
   "Nextjs app router loading": {
     "prefix": "naloading",
     "body": [
-      "export default function Loading() {",
+      "export default function ${1:Loading}() {",
       "\treturn (",
-      "\t\t<${1:div}>",
-      "\t\t\t${2:Loading...}",
-      "\t\t</${1:div}>",
+      "\t\t<${2:div}>",
+      "\t\t\t${3:Loading...}",
+      "\t\t</${2:div}>",
       "\t);",
       "}"
     ],
