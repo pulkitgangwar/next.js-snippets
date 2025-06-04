@@ -33,6 +33,17 @@
   "Nextjs app router page": {
     "prefix": "napage",
     "body": [
+      "export default function ${1:Page}() {",
+      "\treturn (",
+      "\t\t${2:<div></div>}",
+      "\t);",
+      "}"
+    ],
+    "description": "Nextjs app router page"
+  },
+  "Nextjs app router page with params": {
+    "prefix": "napage:params",
+    "body": [
       "export default async function ${1:Page}({",
       "\tparams",
       "}: {",
@@ -44,7 +55,7 @@
       "\t);",
       "}"
     ],
-    "description": "Nextjs app router page"
+    "description": "Nextjs app router page with params"
   },
   "Nextjs app router loading": {
     "prefix": "naloading",
