@@ -41,6 +41,18 @@
     ],
     "description": "Nextjs app router page"
   },
+  "Nextjs app router page with params": {
+    "prefix": "napage:params",
+    "body": [
+      "export default async function ${1:Page}({ params }) {",
+      "\tconst { ${2:param} } = await params;",
+      "\treturn (",
+      "\t\t${4:<div></div>}",
+      "\t);",
+      "}"
+    ],
+    "description": "Nextjs app router page with params"
+  },
   "Nextjs app router loading": {
     "prefix": "naloading",
     "body": [
